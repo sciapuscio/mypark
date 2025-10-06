@@ -81,6 +81,9 @@ $initialProgress  = (int)round(min(100, max(0, $elapsedSeconds / $totalSeconds *
 // Se extrae el token solo para mostrar los últimos caracteres, si se desea.
 $tokenDisplay = substr($estadia['token'], -4);
 
+//Obtenemos los datos del cliente
+$datosCliente = obtenerDatosCliente($estadia['idCliente']);
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -211,7 +214,7 @@ $tokenDisplay = substr($estadia['token'], -4);
 <body>
   <div class="container">
     <header>
-      <h1>¡Hola!</h1>
+      <h1>¡Hola <?= htmlspecialchars($datosCliente[0]['nombre']) ?>!</h1>
       <p>Gracias por confiar en IziPark y JI878</p>
     </header>
 
