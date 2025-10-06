@@ -6,7 +6,7 @@ class Database {
 
     private function __construct() {
         try {
-            $this->pdo = new PDO("mysql:host=127.0.0.1;dbname=mypark", "desa", "Vaporesso77!");
+            $this->pdo = new PDO("mysql:host=127.0.0.1;dbname=mypark", "admin", "Admin!12345");
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             die("Error de conexión: " . $e->getMessage());
